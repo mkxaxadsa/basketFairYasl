@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:appsflyer_sdk/appsflyer_sdk.dart';
-import 'package:basket_test/main.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -13,41 +11,20 @@ import '../../../core/utils.dart';
 
 class MainScreen extends StatefulWidget {
   final String jdnkasdnkja;
-  final String mjksdfn;
-  final String data;
-  final String c1;
-  final String c2;
 
-  const MainScreen(
-      {super.key,
-      required this.jdnkasdnkja,
-      required this.mjksdfn,
-      required this.data,
-      required this.c1,
-      required this.c2});
+  const MainScreen({
+    super.key,
+    required this.jdnkasdnkja,
+  });
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  late AppsflyerSdk _appsflyerSdk;
-  String idAdv = '';
-  String parmFl = '';
-  String paramsSecond = '';
-  Map _deepLinkData = {};
-  Map _gcd = {};
-  bool _isFirstLaunch = false;
-  String _aStats = '';
-
-  String mxasd = '';
-  String rfsdfdsfs = '';
-
   @override
   Widget build(BuildContext context) {
-    final String fsdfdsfds =
-        '${widget.jdnkasdnkja}${widget.mjksdfn}$fsdfds${widget.c1}${widget.c2}';
-    print(fsdfdsfds);
+    final String fsdfdsfds = '${widget.jdnkasdnkja}';
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
